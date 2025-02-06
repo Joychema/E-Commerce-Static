@@ -1,0 +1,208 @@
+/* Default light mode styles */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/*Header with background image and dark overlay */
+header {
+    background-image: url('images/Tech.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;  /* Align text to the right */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 14, 14, 0.1); /* Optional dark overlay for text readability */
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e60000;  /* Airtel Red */;
+}
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #000000;  /* Medium Gray */  
+}
+
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-text 10s linear infinite; /* Adjust the duration for faster/slower scroll */
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* General Section Styles */
+.about.section {
+    background-color: #fff4f4; /* Airtel brand light pink */
+    color: #222; /* Neutral dark text */
+    padding: 50px 0;
+}
+
+.section-title {
+    color: #e1261c; /* Airtel red */
+    font-weight: bold;
+}
+.section-title, p{
+  color: #555;
+}
+
+.section-subtitle {
+    color: #555; /* Neutral light text */
+    font-size: 20px;
+}
+
+.service-link {
+    text-decoration: none;
+    color: #e60000;  /* Airtel Red */
+    font-weight: bold;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/* Scale the entire poster card */
+.poster-card {
+    transform: scale(0.9);  /* Scale down */
+    transition: transform 0.3s ease;
+}
+
+/* Scale the image */
+.poster-card img {
+    max-width: 80%;  /* Image size reduced to 80% */
+    height: auto;
+}
+
+/* Scale down the text */
+.poster-card h3 {
+    font-size: 1.2rem;  /* Reduced font size for heading */
+}
+
+.poster-card p {
+    font-size: 0.9rem;  /* Reduced font size for paragraph */
+}
+
+.poster-card .btn {
+    font-size: 0.8rem;  /* Reduced font size for the button */
+}
+
+/* Hover effect to return poster to normal size */
+.poster-card:hover {
+    transform: scale(1);
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);  Optional: Add shadow for more emphasis */
+}
+
+/* Ensure cards have equal height */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;  /* Smooth transition for scaling */
+    transform: scale(0.9);  /* Scale down */
+
+}
+
+/* Ensure card images have consistent size */
+.card-img-top {
+    object-fit: cover;  /* Ensures the image covers the space without distorting */
+    height: 550px;  /* Adjust height as necessary */
+}
+
+/* Make card body the same height for each card */
+.card-body {
+    flex-grow: 1;  /* Ensures card body takes up remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Optional: Adjust text to fit within the body */
+.card-text {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Hover effect to make card pop */
+.card:hover {
+    transform: scale(1);  /* Increase the scale on hover to make it pop */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Optional: Add shadow for more emphasis */
+}
+#customer-support {
+    background-color: #fff4f4;
+    padding: 50px 0;
+    color: white;
+}
+
+.social-media-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    margin: 0 15px;
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #e60000;
+}
+
+#whatsapp-chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-icon {
+    background-color: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon i {
+    margin-right: 10px;
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E;
+}
