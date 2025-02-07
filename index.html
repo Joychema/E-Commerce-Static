@@ -6,15 +6,23 @@
     <title>NeetChamp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel= favicon href= images/favicon.ico>
+    <link rel="icon" type="image/png" href="images/Icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
-</head>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  </head>
 <body>
+    <!-- <video autoplay loop muted playsinline id="background-video"> -->
+    <!-- <source src="images/tech-connect.mp4" type="video/mp4"> -->
+    <!-- Your browser does not support the video tag. -->
+    <!-- </video> -->
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Airtel</a>
+            <a class="navbar-brand" href="#home">Airtel</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,8 +30,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#recharge">Recharge</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#recharge">Recharge</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#customer-support">Support</a></li>
                     <li class="nav-item"><a class="nav-link" href="#store">Store Locator</a></li>
                 </ul>
             </div>
@@ -36,16 +44,24 @@
     </div> -->
 
     <!-- Hero Section -->
-    <header class="bg-primary text-white text-center py-5" style="background-image: url('images/Tech.png'); background-size: cover; background-position: center;">
-        <div class="container"> <!-- Added text-end to align text to the right -->
-            <h1 class="scrolling-text">Stay Connected, Stay Ahead!</h1>
-            <p>Experience lightning-fast internet and seamless connectivity with Airtel.</p>
-            <a href="#services" class="btn btn-danger">Explore Services</a>
-        </div>
-    </header>
+    <header class="text-white text-center py-5 position-relative" id="home">
+      <!-- Video Background -->
+      <video autoplay loop muted playsinline id="background-video"> 
+          <source src="images/tech-animation.mp4" type="video/mp4">
+          <!-- Your browser does not support the video tag. -->
+      </video>
+
+      <div class="container position-relative z-index-1">
+          <h1 class="scrolling-text">Stay Connected, Stay Ahead!</h1>
+          <p>Experience lightning-fast internet and seamless connectivity with Airtel.</p>
+          <a href="#services" class="btn btn-danger">Explore Services</a>
+      </div>
+  </header>
+  
     
 
     <!-- About Section -->
+
     <section id="about" class="about section">
         <div class="container text-center">
             <h2 class="section-title">About Us</h2>
@@ -86,6 +102,7 @@
     </section>
 
     <!-- Services Section -->
+     
     <section id="services" class="bg-light py-5">
         <div class="container text-center">
             <h2>Our Services</h2>
@@ -101,7 +118,7 @@
             <div class="row align-items-center" id="prepaid">
               <!-- First Poster -->
               <div class="col-md-6 mb-4">
-                <div class="poster-card">
+                <div class="poster-card" data-aos="fade-right" data-aos-delay="100">
                   <img src="images/prepaid.jpeg" class="img-fluid rounded shadow" alt="Airtel Prepaid Plans">
                   <h3 class="mt-3">Airtel Prepaid Plans 💳⚡</h3>
                   <p>Get the freedom to pay as you go. Enjoy flexible, budget-friendly plans with unbeatable data, talk time, and SMS bundles.
@@ -112,7 +129,7 @@
   
               <!-- Second Poster -->
               <div class="col-md-6 mb-4">
-                <div class="poster-card">
+                <div class="poster-card" data-aos="fade-left" data-aos-delay="100">
                   <img src="images/postpaid.jpeg" class="img-fluid rounded shadow" alt="Airtel Postpaid Plans">
                   <h3 class="mt-3">Airtel Postpaid Plans 📋📶</h3>
                   <p>Level up with Airtel Postpaid. Experience unlimited data, premium benefits, and seamless connectivity with plans designed for your lifestyle.
@@ -133,7 +150,7 @@
                 anywhere, with support for up to 10 devices. It’s perfect for streaming, browsing, and sharing. Plus,
                 it comes with a free SIM card and 5GB of data—plug, play, and connect instantly! 🎁📶</p>
               <h6><strong>Key Features :</strong></h6>
-              <ul>
+              <ul class="list-unstyled">
                 <li><i class="bi bi-check"></i><span> 👥 Connect up to 10 devices at once</span></li>
                 <li><i class="bi bi-check"></i> <span>🔋 Rechargeable battery for use anywhere</span></li>
                 <li><i class="bi bi-check"></i> <span>🔘 One-touch WPS button for easy setup</span></li>
@@ -154,7 +171,7 @@
                 all powered by a rechargeable battery. Plus,
                 it comes with a free SIM card and 10GB of data—just plug and play! 🏠🌐</p>
               <h6><strong>Key Features :</strong></h6>
-              <ul>
+              <ul class="list-unstyled">
                 <li><i class="bi bi-check"></i> <span>👥 Connect up to 32 devices at once</span></li>
                 <li><i class="bi bi-check"></i><span> 💻 Compatible with Windows, macOS, and Android</span></li>
                 <li><i class="bi bi-check"></i> <span>🔋 Rechargeable battery: Perfect for on-the-go use</span>.</li>
@@ -177,7 +194,7 @@
               </p>
               <h6><strong>Key Features :</strong></h6>
   
-              <ul>
+              <ul class="list-unstyled">
                 <li><i class="bi bi-check"></i><span> ⚡ Lightning-fast 5G speeds – Experience the future of connectivity.</span></li>
                 <li><i class="bi bi-check"></i> <span>📱 Connect up to 64 devices – Perfect for households or small offices.</span></li>
                 <li><i class="bi bi-check"></i> <span>📶 Dual-band Wi-Fi – Enjoy stable and fast connections on both 2.4 GHz and 5 GHz bands.</span></li>
@@ -192,7 +209,7 @@
         <h2 class="text-center mb-4">Happy Customers 😊</h2>
         <div class="row justify-content-center gy-5">
           <!-- Customer 1 -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="card shadow">
               <img src="images/Customer1.jpeg" class="card-img-top" alt="Happy Customer 1">
               <div class="card-body text-center">
@@ -201,7 +218,7 @@
             </div>
           </div>
           <!-- Customer 2 -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card shadow">
               <img src="images/Customer2.jpeg" class="card-img-top" alt="Happy Customer 2">
               <div class="card-body text-center">
@@ -210,7 +227,7 @@
             </div>
           </div>
           <!-- Customer 3 -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card shadow">
               <img src="images/Customer3.jpeg" class="card-img-top" alt="Happy Customer 3">
               <div class="card-body text-center">
@@ -302,40 +319,54 @@
 ></script>
 
     <!-- Footer -->
-<footer class="bg-dark text-white py-4">
-    <div class="container">
-        <div class="row">
-            <!-- Navigation Links -->
-            <div class="col-md-4">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
-                    <li><a href="#about" class="text-white text-decoration-none">About</a></li>
-                    <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
-                    <li><a href="#store" class="text-white text-decoration-none">Find a Store</a></li>
-                    <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Information -->
-            <div class="col-md-4">
-                <h5>Contact Us</h5>
-                <p>Email: <a href="mailto:johnmaneene@gmail.com" class="text-white text-decoration-none">johnmaneene@gmail.com</a></p>
-                <p>Phone: <a href="tel:+254 782 773 671" class="text-white text-decoration-none">+254 782 773 671</a></p>
-                <p>Phone: <a href="tel:+254 703 169 988" class="text-white text-decoration-none">+254 703 169 988</a></p>
-            </div>
-
-            <!-- Copyright -->
-            <div class="col-md-4">
-                <h5>&copy; 2025 Airtel</h5>
-                <p>All Rights Reserved.</p>
-            </div>
-        </div>
-    </div>
-</footer>
+    <footer class="py-4">
+      <div class="container">
+          <div class="row">
+              <!-- Navigation Links -->
+              <div class="col-md-4">
+                  <h5 class="footer-title">Quick Links</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li><a href="#store">Find a Store</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                  </ul>
+              </div>
+  
+              <!-- Contact Information -->
+              <div class="col-md-4">
+                  <h5 class="footer-title">Contact Us</h5>
+                  <p>Email: <a href="mailto:johnmaneene@gmail.com">johnmaneene@gmail.com</a></p>
+                  <p>Phone: <a href="tel:+254782773671">+254 782 773 671</a></p>
+                  <p>Phone: <a href="tel:+254703169988">+254 703 169 988</a></p>
+              </div>
+  
+              <!-- Copyright & Social Media -->
+              <div class="col-md-4">
+                  <h5 class="footer-title">&copy; 2025 NeetChamp</h5>
+                  <p>All Rights Reserved.</p>
+                  <div class="social-icons">
+                      <a href="https://twitter.com/airtel" target="_blank"><i class="fab fa-twitter"></i></a>
+                      <a href="https://instagram.com/airtel" target="_blank"><i class="fab fa-instagram"></i></a>
+                      <a href="https://facebook.com/airtel" target="_blank"><i class="fab fa-facebook"></i></a>
+                      <a href="https://www.tiktok.com/@airtel_ke" target="_blank"><i class="fab fa-tiktok"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+    AOS.init(); // Initialize AOS
+    </script>
+
 </body>
 </html>

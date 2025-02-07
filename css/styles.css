@@ -1,6 +1,6 @@
 /* Default light mode styles */
 body {
-    background-color: white;
+    background-color: rgb(210, 205, 205);
     color: black;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -12,8 +12,19 @@ body {
 }
 
 /*Header with background image and dark overlay */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
 header {
-    background-image: url('images/Tech.png');
+    /* background-image: url('images/Tech.png'); */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -22,7 +33,8 @@ header {
 header .container {
     position: relative;
     z-index: 2;
-    text-align: center;  /* Align text to the right */
+    text-align: center;  
+    ;
 }
 
 header::before {
@@ -40,17 +52,20 @@ header h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #e60000;  /* Airtel Red */;
+    font-weight: bolder;
 }
 header p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #000000;  /* Medium Gray */  
+    color: #ffffff;  
+    font-weight:bold ;  
 }
 
 .scrolling-text {
     display: inline-block;
     white-space: nowrap;
     animation: scroll-text 10s linear infinite; /* Adjust the duration for faster/slower scroll */
+    font-weight: bolder;
 }
 
 @keyframes scroll-text {
@@ -61,8 +76,38 @@ header p {
         transform: translateX(-100%);
     }
 }
+/* Navbar Styling */
+.navbar-nav .nav-link {
+    color: #d90000 !important; /* Airtel Red */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important; /* White on hover */
+    background-color: #d90000; /* Optional: Red background on hover */
+    border-radius: 5px; /* Slight rounding for a smooth effect */
+    padding: 5px 10px; /* Add spacing to make hover effect more visible */
+}
+.navbar-brand {
+    color: #d90000 !important; /* Airtel Red */
+    font-weight: bold;
+}
+/* .navbar-brand:hover {
+    color: #ffffff !important; /* White on hover */
+    /* background-color: #d90000; Optional: Red background on hover */
+    /* border-radius: 5px; Slight rounding for a smooth effect */
+    /* padding: 5px 10px; /*Add spacing to make hover effect more visible */
+
+/* } */ */
 
 /* General Section Styles */
+.about-card i.bi-check2-circle {
+    color: #d90000; /* Airtel Red */
+    font-size: 1.2rem; /* Adjust size if needed */
+}
+
+
 .about.section {
     background-color: #fff4f4; /* Airtel brand light pink */
     color: #222; /* Neutral dark text */
@@ -205,4 +250,49 @@ header p {
 
 .whatsapp-icon:hover {
     background-color: #128C7E;
+}
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+    background-color: #fff4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-title {
+    color: #d90000; /* Airtel Red for Titles */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #333; /* Dark gray for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #d90000; /* Change link color to Airtel Red on hover */
+}
+
+/* Social Media Icons */
+footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    display: inline-block;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+    color: #d90000; /* Airtel Red */
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
 }
