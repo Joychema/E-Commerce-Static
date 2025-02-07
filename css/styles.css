@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 /* Styles for tablets */
 @media (max-width: 768px) {
     .container {
@@ -13,19 +20,51 @@
     }
 }
 
-
 /* Default light mode styles */
 body {
     background-color: rgb(210, 205, 205);
     color: black;
     transition: background-color 0.3s, color 0.3s;
+    /* padding-left: 20px; Adjust as needed */
+    /* padding-right: 20px; Adjust as needed */
 }
 
 html, body {
     overflow-x: hidden;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1050;  /* Ensure it's above content but below navbar */
+    display: none; /* Initially hidden */
+}
+
+/* .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2); */
+    /* z-index: 999; Above overlay */
+    /* transform: translateX(100%); Initially hidden */
+    /* transition: transform 0.3s ease-in-out; */
+/* } */
+
+/* .navbar-collapse.show { */
+    /* transform: translateX(0); Slide in menu */
+/* } */
+
+/* body.no-scroll { */
+    /* overflow: hidden; Prevent scrolling */
+/* } */
 
 /* Dark mode styles */
 .dark-mode {

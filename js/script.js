@@ -18,22 +18,81 @@
 //     }
 // };
 
+// document.addEventListener("DOMContentLoaded", function () {
+//     const navbarToggler = document.querySelector(".navbar-toggler");
+//     const navbarCollapse = document.querySelector(".navbar-collapse");
+//     const overlay = document.getElementById("overlay");
+//     const body = document.body; // Get body element
+
+//     // Function to open mobile menu
+//     function openMenu() {
+//         navbarCollapse.classList.add("show");
+//         overlay.style.display = "block";
+//         body.style.overflow = "hidden"; // Disable scrolling
+//     }
+
+//     // Function to close mobile menu
+//     function closeMenu() {
+//         navbarCollapse.classList.remove("show");
+//         overlay.style.display = "none";
+//         body.style.overflow = ""; // Re-enable scrolling
+//     }
+
+//     // Open menu when clicking the toggler
+//     navbarToggler.addEventListener("click", function () {
+//         if (navbarCollapse.classList.contains("show")) {
+//             closeMenu();
+//         } else {
+//             openMenu();
+//         }
+//     });
+
+//     // Close menu when clicking the overlay
+//     overlay.addEventListener("click", closeMenu);
+
+//     // Close menu when clicking a nav link (optional)
+//     document.querySelectorAll(".nav-link").forEach(link => {
+//         link.addEventListener("click", closeMenu);
+//     });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navbarCollapse = document.querySelector(".navbar-collapse");
+    const overlay = document.getElementById("overlay");
+    const body = document.body;
 
-    document.addEventListener("click", function (event) {
-        const isClickInsideMenu = navbarCollapse.contains(event.target);
-        const isClickOnToggler = navbarToggler.contains(event.target);
+    // Get Bootstrap Collapse instance
+    const bsNavbar = new bootstrap.Collapse(navbarCollapse, { toggle: false });
 
-        if (!isClickInsideMenu && !isClickOnToggler) {
-            navbarCollapse.classList.remove("show"); // Closes the menu
+    // Function to open mobile menu
+    function openMenu() {
+        bsNavbar.show();
+        overlay.style.display = "block";
+        body.style.overflow = "hidden"; // Disable scrolling
+    }
+
+    // Function to close mobile menu
+    function closeMenu() {
+        bsNavbar.hide();
+        overlay.style.display = "none";
+        body.style.overflow = ""; // Re-enable scrolling
+    }
+
+    // Open menu when clicking the toggler
+    navbarToggler.addEventListener("click", function () {
+        if (navbarCollapse.classList.contains("show")) {
+            closeMenu();
+        } else {
+            openMenu();
         }
     });
-});
 
-document.querySelectorAll(".navbar-nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        document.querySelector(".navbar-collapse").classList.remove("show");
+    // Close menu when clicking the overlay
+    overlay.addEventListener("click", closeMenu);
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", closeMenu);
     });
 });
