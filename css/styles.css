@@ -1,9 +1,31 @@
+/* Styles for tablets */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Styles for mobile phones */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+
 /* Default light mode styles */
 body {
     background-color: rgb(210, 205, 205);
     color: black;
     transition: background-color 0.3s, color 0.3s;
 }
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 
 /* Dark mode styles */
 .dark-mode {
@@ -24,17 +46,20 @@ body {
 
 
 header {
-    /* background-image: url('images/Tech.png'); */
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    /* min-height: 100vh; Makes it full-screen */
+    padding: 150px 0; /* Increase space above and below content */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    text-align: center;
 }
+
 
 header .container {
     position: relative;
     z-index: 2;
     text-align: center;  
-    ;
+    padding-top: 50px;
 }
 
 header::before {
@@ -77,6 +102,12 @@ header p {
     }
 }
 /* Navbar Styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
 .navbar-nav .nav-link {
     color: #d90000 !important; /* Airtel Red */
     font-weight: bold;
